@@ -43,7 +43,7 @@ public class JCBlock extends Block {
     }
 
     public void setHarvestTool(String type) {
-        if(type.equals("shovel") || type.equals("pickaxe")) harvest = type;
+        if(type.equals("shovel") || type.equals("pickaxe") || type.equals("axe")) harvest = type;
         else harvest = null;
     }
 
