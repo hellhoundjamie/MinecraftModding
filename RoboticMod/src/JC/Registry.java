@@ -26,6 +26,7 @@ public class Registry {
             if(bl.getHarvestTool() != null) {
                 MinecraftForge.setBlockHarvestLevel(bl, bl.getHarvestTool(), bl.getHarvestLevel());
             }
+
         }
     }
 

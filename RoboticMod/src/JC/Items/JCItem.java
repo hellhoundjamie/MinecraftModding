@@ -29,6 +29,7 @@ public class JCItem extends Item {
         String[] str = name.split(" ");
 
         this.itemIcon = reg.registerIcon("roboticmod:blocks/" + str[0] + str != null ? str[1] : "");
+        ;
     }
 
     public String getName() {

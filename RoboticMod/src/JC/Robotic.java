@@ -1,5 +1,6 @@
 package JC;
 
+import JC.Blocks.JCBlock;
 import JC.Proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -8,6 +9,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 /**
@@ -31,8 +34,12 @@ public class Robotic {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
+        JCBlock block = new JCBlock(500, Material.ground, "Stone");
+
         Registry.blocks();
         Registry.items();
+
+        LanguageRegistry.instance().addStringLocalization("itemGroup.Robotic", "Robotic Tab");
     }
 
     @EventHandler
