@@ -1,5 +1,7 @@
-package JC.Blocks;
+package JC;
 
+import JC.Blocks.JCBlock;
+import JC.Items.JCItem;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +26,16 @@ public class Registry {
             if(bl.getHarvestTool() != null) {
                 MinecraftForge.setBlockHarvestLevel(bl, bl.getHarvestTool(), bl.getHarvestLevel());
             }
+        }
+    }
+
+    public static void items() {
+        Iterator itr = JCItem.items.iterator();
+
+        while(itr.hasNext()) {
+            JCItem it = (JCItem) itr.next();
+            GameRegistry.registerItem(it, it.getUnlocalizedName().substring(4));
+            LanguageRegistry.addName(it, it.getName());
         }
     }
 }

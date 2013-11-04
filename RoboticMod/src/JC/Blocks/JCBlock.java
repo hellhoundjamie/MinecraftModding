@@ -3,6 +3,7 @@ package JC.Blocks;
 import JC.Robotic;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 
 import java.util.ArrayList;
 
@@ -35,6 +36,13 @@ public class JCBlock extends Block {
 
         setHarvestTool(harvestTool);
         setHarvestLevel(harvestLevel);
+    }
+
+    @Override
+    public void registerIcons(IconRegister reg) {
+        String[] str = name.split(" ");
+
+        this.blockIcon = reg.registerIcon("roboticmod:blocks/" + str[0] + str != null ? str[1] : "");
     }
 
     public void setHarvestTool(String type) {

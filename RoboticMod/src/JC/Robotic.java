@@ -1,6 +1,5 @@
 package JC;
 
-import JC.Blocks.Registry;
 import JC.Proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
