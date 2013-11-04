@@ -26,12 +26,13 @@ public class Robotic {
     @Instance(value = BaseStrings.MODID)
     public static Robotic instance;
 
-    @SidedProxy(clientSide = "JC.proxies.ClientProxy", serverSide = "JC.proxies.CommonProxy")
+    @SidedProxy(clientSide = "JC.Proxies.ClientProxy", serverSide = "JC.Proxies.CommonProxy")
     public static CommonProxy proxy;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
         Registry.blocks();
+        Registry.items();
     }
 
     @EventHandler

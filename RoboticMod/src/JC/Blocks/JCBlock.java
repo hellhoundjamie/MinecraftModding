@@ -15,7 +15,6 @@ import java.util.ArrayList;
  * @license Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License (http://creativecommons.org/licenses/by-nc-nd/3.0/)
  */
 public class JCBlock extends Block {
-    //TODO: Allowing textures to be added
     public static ArrayList<JCBlock> blocks = new ArrayList<JCBlock>();
     private String name, harvest;
     private int harvestLevel = 0;
@@ -26,10 +25,7 @@ public class JCBlock extends Block {
         this.name = name;
         setUnlocalizedName(name.replace(' ', '_'));
         blocks.add(this);
-
-        //setTextureName("roboticmod:" + name);
     }
-
 
     public JCBlock(int id, Material mat, String name, String harvestTool, int harvestLevel) {
         this(id, mat, name);
