@@ -38,11 +38,8 @@ public class JCBlock extends Block {
     public void registerIcons(IconRegister reg) {
         String[] str = name.split(" ");
 
-        if(str.length > 1) {
-            blockIcon = reg.registerIcon("robotic:" + str[0].toLowerCase() + str[1]);
-        } else {
-            blockIcon = reg.registerIcon("robotic:" + str[0].toLowerCase());
-        }
+        if(str.length > 1) blockIcon = reg.registerIcon("robotic:" + str[0].toLowerCase() + str[1]);
+        else blockIcon = reg.registerIcon("robotic:" + str[0].toLowerCase());
     }
 
     public void setHarvestTool(String type) {

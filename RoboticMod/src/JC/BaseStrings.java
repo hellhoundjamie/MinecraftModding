@@ -12,5 +12,4 @@ public class BaseStrings {
             MODID = "roboticID",
             NAME = "Robotic Enhancements",
             VERSION = "0.0.0";
-
 }

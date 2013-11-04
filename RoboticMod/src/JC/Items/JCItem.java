@@ -28,8 +28,8 @@ public class JCItem extends Item {
     public void registerIcons(IconRegister reg) {
         String[] str = name.split(" ");
 
-        this.itemIcon = reg.registerIcon("roboticmod:blocks/" + str[0] + str != null ? str[1] : "");
-        ;
+        if(str.length > 1) this.itemIcon = reg.registerIcon("robotic:" + str[0] + str[1]);
+        else itemIcon = reg.registerIcon("robotic:" + str[0]);
     }
 
     public String getName() {
