@@ -21,7 +21,7 @@ public class JCBlock extends Block {
 
     public JCBlock(int id, Material mat, String name) {
         super(id, mat);
-        setCreativeTab(Robotic.tab);
+        setCreativeTab(Robotic.roboticBlocks);
         this.name = name;
         setUnlocalizedName(name.replace(' ', '_'));
         blocks.add(this);

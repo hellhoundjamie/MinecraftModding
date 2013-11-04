@@ -19,7 +19,7 @@ public class JCItem extends Item {
 
     public JCItem(int id, String name) {
         super(id);
-        setCreativeTab(Robotic.tab);
+        setCreativeTab(Robotic.roboticItems);
         setUnlocalizedName(name.replace(' ', '_'));
         this.name = name;
     }
